@@ -1,3 +1,5 @@
+using Xunit;
+
 namespace GameOfLife.Tests;
 
 public class GameOfLifeIntegrationTests
@@ -178,9 +180,9 @@ OOO
 
         repo.SetPattern(5, 5, blinkerPattern);
 
-        Assert.True(repo.GetCell(5, 6));
-        Assert.True(repo.GetCell(6, 6));
-        Assert.True(repo.GetCell(7, 6));
+        Assert.True(repo.GetCell(5, 7));
+        Assert.True(repo.GetCell(6, 7));
+        Assert.True(repo.GetCell(7, 7));
         Assert.Equal(3, repo.CountLivingCells());
     }
 
